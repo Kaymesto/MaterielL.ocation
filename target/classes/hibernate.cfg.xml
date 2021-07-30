@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- pour voir les requetes SQL sur la console -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!--  Paramètres de connexion à la base de données -->
+        <!-- <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property> -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/locationmateriel</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Alucard_59</property>
+
+
+        <!-- Comportement pour la conservation des tables -->
+<!--        <property name="hbm2ddl.auto">create</property>-->
+
+        <!-- Fichiers à mapper -->
+        <mapping class="fr.inetum.beans.Adresse" />
+        <mapping class="fr.inetum.beans.Client" />
+        <mapping class="fr.inetum.beans.Location" />
+        <mapping class="fr.inetum.beans.Materiel" />
+        <mapping class="fr.inetum.beans.Categorie" />
+
+    </session-factory>
+</hibernate-configuration>
